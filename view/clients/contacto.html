@@ -90,6 +90,95 @@
 
             </article>
 
+            <article id="form-titulo">
+
+                <header>
+                    <h2 >CUENTANOS TU VISION</h2>
+                    <p>Por favor completa la información para preparar una propuesta personalizada o preparar las muestras físicas adecuadas para su visita.</p>
+                </header>
+
+                <form action="/enviar-contacto" method="post">
+
+                    <p>
+                        <label for="nombre">NOMBRE Y APELLIDOS*</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Gabriel Cruz" required>
+                    </p>
+
+                    <p>
+                        <label for="correo">CORREO ELECTRONICO*</label>
+                        <input type="email" id="correo" name="correo" placeholder="gabriel@ejemplo.com" required>
+                    </p>
+
+                    <p>
+                        <label for="telefono">TELEFONO / WHATSAPP*</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+1 000 000 0000" required>
+                    </p>
+
+                    <p>
+                        <label for="plan">PLAN A ELEGIR*</label>
+                        <select id="plan" name="plan" required>
+                            <option value="">Elige un plan</option>
+                            <option value="quinceanera-esencial">Quinceañera Esencial</option>
+                            <option value="coleccion-premiere">Coleccion Premiere</option>
+                            <option value="boda-intima">Boda Intima</option>
+                            <option value="boda-imperial-romance">Boda Imperial Romance</option>
+                            <option value="producto-comercial">Producto Comercial Pack</option>
+                            <option value="graduacion-solo-familia">Graduacion Solo &amp; Familia</option>
+                        </select>
+                    </p>
+
+                    <fieldset>
+                        <legend>TIPO DE CONSULTA*</legend>
+                        <p>
+                            <input type="radio" id="consulta-general" name="tipo-consulta" value="consulta-general" checked>
+                            <label for="consulta-general">CONSULTA GENERAL</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="visita-muestrarios" name="tipo-consulta" value="visita-muestrarios">
+                            <label for="visita-muestrarios">VISITA &amp; MUESTRARIOS</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="prensa-marcas" name="tipo-consulta" value="prensa-marcas">
+                            <label for="prensa-marcas">PRENSA &amp; MARCAS</label>
+                        </p>
+                    </fieldset>
+
+                    <p>
+                        <label for="fecha-evento">FECHA DEL EVENTO*</label>
+                        <input type="date" id="fecha-evento" name="fecha-evento" required>
+                    </p>
+
+                    <p>
+                        <label for="cantidad-personas">CANTIDAD DE PERSONAS*</label>
+                        <input type="number" id="cantidad-personas" name="cantidad-personas" min="1" placeholder="50" required>
+                    </p>
+
+                    <p>
+                        <label for="escenario">ESCENARIO DE LA SESION*</label>
+                        <input type="text" id="escenario" name="escenario" placeholder="Ej. Ciudad Colonial" required>
+                    </p>
+
+                    <p>
+                        <label for="expectativas">DINOS QUE ESPERAS DE NUESTRO TRABAJO*</label>
+                        <textarea id="expectativas" name="expectativas" placeholder="Escribe aquí lo que esperas de nuestro trabajo, tus intereses e ideas que tienes para tu sesión." required></textarea>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="politica" name="politica" required>
+                        <label for="politica">He leído y acepto la política de confidencialidad para el tratamiento de datos y propuestas artísticas personalizadas de Luz de Santiago Studio.</label>
+                    </p>
+
+                    <p>
+                        <input type="submit">ENVIAR MENSAJE</input>
+                    </p>
+
+                </form>
+
+            </article>
+
+        </section>
+
+
 
 
 
