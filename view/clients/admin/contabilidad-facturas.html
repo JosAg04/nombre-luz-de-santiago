@@ -237,7 +237,135 @@
         </tbody>
 
       </table>
+
+    </section>
+
+    <section class="registrar-factura">
+
+        <!-- SECCION REGISTRAR FACTURA -->
+
+      <h2>Registrar factura</h2>
+ 
+      <form action="#" method="post">
+        
+        <fieldset>
+
+          <legend>Registrar factura</legend>
+ 
+            <label>
+              Plan elegido <abbr title="obligatorio">*</abbr>
+              <input type="text" name="plan" placeholder="R-000" required>
+            </label>
+
+            <label>
+              Nombre del cliente <abbr title="obligatorio">*</abbr>
+              <input type="text" name="cliente" placeholder="Pablo Guzman" required>
+            </label>
+   
+ 
+       
+            <label>
+              Cédula <abbr title="obligatorio">*</abbr>
+              <input type="text" name="cedula" inputmode="numeric" placeholder="1455.0" required>
+            </label>
+            
+            <label>
+              Fecha <abbr title="obligatorio">*</abbr>
+              <input type="date" name="fecha" required>
+            </label>
       
+ 
+        
+            <label>
+              Cobertura <abbr title="obligatorio">*</abbr>
+              <input type="text" name="cobertura" placeholder="Pago total" required>
+            </label>
+        
+ 
+         
+            <label>
+              Fotolibro Fine-art <abbr title="obligatorio">*</abbr>
+              <input type="number" name="fotolibro" step="0.01" min="0" placeholder="1455.0" required>
+            </label>
+            <label>
+              Agregado <abbr title="obligatorio">*</abbr>
+              <input type="text" name="agregado" placeholder="Efectivo" required>
+            </label>
+      
+ 
+        
+            <label>
+              NCF
+              <input type="text" name="ncf" placeholder="N.º de transferencia">
+            </label>
+         
+ 
+          
+            <label>
+              Correo electrónico del cliente
+              <input type="email" name="correo" placeholder="Ejemplo@gmail.com" autocomplete="email">
+            </label>
+         
+ 
+          <p><small>La factura se envía al cliente automáticamente.</small></p>
+        </fieldset>
+ 
+        <button type="button">Anular factura</button>
+        <button type="submit">Registrar factura</button>
+      </form>
+ 
+      <article>
+
+        <div>
+            
+          <img src="logo-luz-de-santiago.svg" alt="Luz de Santiago">
+          <h3>Factura de crédito fiscal</h3>
+          <p>NCF B0100000522</p>
+          <p><time datetime="2025-01-01">01 Ene 2025</time></p>
+
+        </div>
+ 
+        <p>Cliente: <b>NOMBRE CLIENTE</b> · 402-090304-0</p>
+ 
+        <dl>
+          <dt>Plan elegido</dt>
+          <dd><b>$0.00</b></dd>
+
+          <dt>Cobertura 0 horas</dt>
+          <dd>$0.00</dd>
+
+          <dt>Fotolibro Fine-art</dt>
+          <dd>$0.00</dd>
+
+          <dt>Curaduría 0 fotos</dt>
+          <dd>$0.00</dd>
+
+          <dt>Agregado</dt>
+          <dd>$0.00</dd>
+
+          <dt>Descuento</dt>
+          <dd>-$0.00</dd>
+        </dl>
+ 
+        <div>
+
+          <dl>
+
+            <dt>Subtotal</dt>
+            <dd>$0.00</dd>
+
+            <dt>ITBIS 18%</dt>
+            <dd>$0.00</dd>
+
+            <dt>Total</dt>
+            <dd><b>$0.00</b></dd>
+
+          </dl>
+
+        </div>
+
+      </article>
+
     </section>
 
   </main>
