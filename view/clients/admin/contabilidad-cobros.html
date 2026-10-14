@@ -47,7 +47,7 @@
 
         <p>Contabilidad</p>
         <h1>Cobros y pagos de clientes</h1>
-        </p>Anticipos y pagos totaltes de cada reserva.</p>
+        <p>Anticipos y pagos totales de cada reserva.</p>
 
     </div>
 
@@ -98,7 +98,7 @@
         <li>
           <article>
             <dl>
-              <dt>Vencidogs</dt>
+              <dt>Vencidos</dt>
               <dd><data value="0">$0.00</data></dd>
               <dd><small>0 Vencidos</small></dd>
             </dl>
@@ -117,6 +117,126 @@
 
       </ul>
 
+    </section>
+
+    <section class="listado-cobros">
+
+        <!-- SECCION LISTADO DE COBROS -->
+
+      <h2>Listado de cobros</h2>
+ 
+      <form action="#" method="get">
+
+        <nav>
+
+          <ul>
+
+            <li><button type="button" aria-pressed="true">Todos (0)</button></li>
+            <li><button type="button" aria-pressed="false">Cobrados (0)</button></li>
+            <li><button type="button" aria-pressed="false">Pendientes (0)</button></li>
+            <li><button type="button" aria-pressed="false">Vencidos (0)</button></li>
+
+          </ul>
+
+        </nav>
+
+        <button type="button">Metodo →</button>
+        <button type="button">Exportar →</button>
+
+      </form>
+ 
+      <table>
+
+        <caption>Cobros de clientes</caption>
+
+        <thead>
+
+          <tr>
+
+            <th scope="col">Pago</th>
+            <th scope="col">Cliente</th>
+            <th scope="col">Reserva</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Metodo</th>
+            <th scope="col">Concepto</th>
+            <th scope="col">Total</th>
+            <th scope="col">Estado</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <th scope="row">P-000</th>
+            <td>Nombre cliente</td>
+            <td><b>R-000</b></td>
+            <td><time datetime="2026-01-01">01 Ene 2026</time></td>
+            <td>Transferencia</td>
+            <td>Anticipo</td>
+            <td>$0.00</td>
+            <td><strong>Cobrado</strong></td>
+
+          </tr>
+
+          <tr>
+
+            <th scope="row">P-000</th>
+            <td>Nombre cliente</td>
+            <td><b>R-000</b></td>
+            <td><time datetime="2026-01-01">01 Ene 2026</time></td>
+            <td>Transferencia</td>
+            <td>Pago total</td>
+            <td>$0.00</td>
+            <td><strong>Cobrado</strong></td>
+
+          </tr>
+
+          <tr>
+
+            <th scope="row">P-000</th>
+            <td>Nombre cliente</td>
+            <td><b>R-000</b></td>
+            <td><time datetime="2026-01-01">01 Ene 2026</time></td>
+            <td>–</td>
+            <td>Anticipo</td>
+            <td>$0.00</td>
+            <td><strong>Pendiente</strong></td>
+
+          </tr>
+
+          <tr>
+
+            <th scope="row">P-000</th>
+            <td>Nombre cliente</td>
+            <td><b>R-000</b></td>
+            <td><time datetime="2026-01-01">01 Ene 2026</time></td>
+            <td>Efectivo</td>
+            <td>Pago total</td>
+            <td>$0.00</td>
+            <td><strong>Pendiente</strong></td>
+
+          </tr>
+
+          <tr>
+
+            <th scope="row">P-000</th>
+            <td>Nombre cliente</td>
+            <td><b>R-000</b></td>
+            <td><time datetime="2026-01-01">01 Ene 2026</time></td>
+            <td>Tarjeta</td>
+            <td>Anticipo</td>
+            <td>$0.00</td>
+            <td><strong>Vencido</strong></td>
+            
+          </tr>
+
+        </tbody>
+
+      </table>
+      
     </section>
 
 </main>
