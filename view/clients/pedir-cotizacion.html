@@ -302,57 +302,110 @@
 
                 </fieldset>
 
+            
+
+                <!-- RESUMEN DE COTIZACION -->
+
+                <aside>
+
+                    <h2>Resumen de Cotización</h2>
+
+                    <dl>
+                        <div>
+                            <dt>Sesion Seleccionada</dt>
+                            <dd>Quinceanera y Cumpleanos</dd>
+                        </div>
+                        <div>
+                            <dt>Tarifa base de partda</dt>
+                            <dd>$550</dd>
+                        </div>
+                    </dl>
+
+                    <dl>
+                        <div>
+                            <dt>Duracion: 4 horas</dt>
+                            <dd>+$150</dd>
+                        </div>
+                        <div>
+                            <dt>Volumen: 50 Fotografias editadas</dt>
+                            <dd>$80</dd>
+                        </div>
+                    </dl>
+
+                    <dl>
+                        <div>
+                            <p>
+                                <span>
+                                    <strong>Inversión estimada total</strong>
+                                    <small>Impuestos y curaduría incluidos</small>
+                                </span>
+                                <output name="total" for="disciplina horas fotos extras">$780</output>
+                            </p>
+
+                            <p>
+                                <span>Reserva hoy con (30%)</span>
+                                <output name="anticipo">$234</output>
+                            </p>
+                        </div>
+                        <div>
+                            <dt>Volumen: 50 Fotografias editadas</dt>
+                            <dd>$80</dd>
+                        </div>
+                    </dl>
+                </aside>
+
             </div>
 
-            <!-- RESUMEN DE COTIZACION -->
+            <!-- PASO FINAL: DATOS DE RESERVA -->
 
-            <aside>
+            <section class="datos-reservas">
 
-                <h2>Resumen de Cotización</h2>
+                <div>
 
-                <dl>
-                    <div>
-                        <dt>Sesion Seleccionada</dt>
-                        <dd>Quinceanera y Cumpleanos</dd>
-                    </div>
-                    <div>
-                        <dt>Tarifa base de partda</dt>
-                        <dd>$550</dd>
-                    </div>
-                </dl>
+                    <p>
+                        Paso final
+                    </p>
+                    <h2>Solicitud de Reserva</h2>
+                    <p>
+                        Complete los datos del evento. Le enviaremos la propuesta oficial timbrada en PDF junto al calendario de disponibilidad en menos de 2 horas.
+                    </p>
 
-                <dl>
-                    <div>
-                        <dt>Duracion: 4 horas</dt>
-                        <dd>+$150</dd>
-                    </div>
-                    <div>
-                        <dt>Volumen: 50 Fotografias editadas</dt>
-                        <dd>$80</dd>
-                    </div>
-                </dl>
+                </div>
 
-                <dl>
-                    <div>
-                        <p>
-                            <span>
-                                <strong>Inversión estimada total</strong>
-                                <small>Impuestos y curaduría incluidos</small>
-                            </span>
-                            <output name="total" for="disciplina horas fotos extras">$780</output>
-                        </p>
+                <div>
+                    <label for="nombre">Nombre y apellidos *</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Gabriel Cruz" required>
+                </div>
 
-                        <p>
-                            <span>Reserva hoy con (30%)</span>
-                            <output name="anticipo">$234</output>
-                        </p>
-                    </div>
-                    <div>
-                        <dt>Volumen: 50 Fotografias editadas</dt>
-                        <dd>$80</dd>
-                    </div>
-                </dl>
-            </aside>
+                <div>
+                    <label for="correo">Correo electronico *</label>
+                    <input type="email" id="correo" name="correo" placeholder="Ejemplo@gmail.com" required>
+                </div>
+
+                <div>
+                    <label for="telefono">Número de teléfono / WhatsApp *</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="829-123-7809" required>
+                </div>
+
+                <div>
+                    <label for="fecha">Fecha del evento o sesion *</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <div>
+                    <label for="detalles">Locacion o detalles creativos *</label>
+                    <textarea name="detalles" id="detalles rows="8" placeholder="Lugar previsto, tematica, requisitos especiales o dudas sobre el cronograma..."></textarea>
+                </div>
+
+                <div>
+                    <p>
+                        Sin cobro inmediato. Solo se cobrará el 30% tras confirmar fechas y coordinar.
+                    </p>
+                    <button type="submit">Enviar Cotizacion</button>
+                </div>
+
+            </section>
+
         </form>
 
         
