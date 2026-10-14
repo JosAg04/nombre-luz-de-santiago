@@ -236,7 +236,66 @@
         </tbody>
 
       </table>
-      
+
+    </section>
+
+    <section class="registrar-pago">
+        
+        <h2>Registrar Pago</h2>
+
+        <!-- SECCION REGISTRAR PAGO -->
+
+        <form action="#" method="post">
+
+            <fieldset>
+
+                <legend>Registrar pago</legend>
+
+                <label for="text"> Numero de reserva</label>
+                <input type="text" name="reserva" id="reserva" placeholder="R-0000" required>
+
+                <label for="text"> Nombre del cliente</label>
+                <input type="text" name="cliente" id="cliente" placeholder="Pablo Guzman" required>
+
+                <label for="number"> Total de la reserva</label>
+                <input type="number" name="total-reserva" id="total-reserva" placeholder="1455.00" required>
+
+                <label for="number"> Anticipo (30%)</label>
+                <input type="number" name="anticipo" id="anticipo" placeholder="436.00" readonly>
+
+                <label for="date"> Fecha</label>
+                <input type="date" name="fecha" id="fecha" required>
+
+                <label for="concepto"> Concepto</label>
+
+                <select name="concepto" required>
+
+                    <option value="pago-total">Pago total</option>
+                    <option value="anticipo">Anticipo</option>
+
+                </select>
+
+                <label for="metodo"> Método de pago</label>
+                <select name="metodo" required>
+
+                    <option value="efectivo">Efectivo</option>
+                    <option value="transferencia">Transferencia</option>
+                    <option value="tarjeta">Tarjeta</option>
+
+                </select>
+
+                <label for="comprobante"> Referencia o comprobante</label>
+                <input type="text" name="comprobante" id="comprobante" placeholder="N.º de transferencia" required>
+
+                <button type="reset">Cancelar</button>
+                <button type="submit">Registrar Pago</button>
+
+            </fieldset>
+
+        </form>
+
+
+
     </section>
 
 </main>
