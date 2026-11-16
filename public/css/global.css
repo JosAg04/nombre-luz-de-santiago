@@ -1,0 +1,503 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;700&display=swap");
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+:root {
+    --color-fondo: #f0eeec;
+    --color-blanco: #ffffff;
+    --color-texto: #1a1a1a;
+    --color-negro: #111111;
+    --color-linea: #c9c6c3;
+
+    --fuente-titulo: "Playfair Display", Georgia, "Times New Roman", serif;
+    --fuente-texto: "Inter", Arial, Helvetica, sans-serif;
+
+    --ancho-max: 1200px;
+}
+
+/* =========================================================
+   RESET BASE
+   ========================================================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-texto);
+    background-color: var(--color-blanco);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+address {
+    font-style: normal;
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-titulo);
+    font-weight: 500;
+}
+
+/* =========================================================
+   HEADER PRINCIPAL (solo el de la cabecera de la pagina)
+   ========================================================= */
+body > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 12px 5%;
+    background-color: var(--color-fondo);
+}
+
+.logo-cabecera {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-cabecera img {
+    width: 44px;
+    height: auto;
+}
+
+.titulo-cabecera {
+    font-family: var(--fuente-titulo);
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    max-width: 70px;
+}
+
+.navegacion-cabecera ul {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.navegacion-cabecera a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.navegacion-cabecera a:hover,
+.navegacion-cabecera a[aria-current="page"] {
+    border-bottom-color: var(--color-negro);
+}
+
+.planes {
+    display: inline-block;
+    padding: 10px 28px;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.planes:hover {
+    background-color: #333;
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+#Presentacion-principal {
+    width: 100%;
+}
+
+.hero {
+    position: relative;
+    height: 90px;
+    height: clamp(120px, 20vw, 300px);
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 40, 70, 0.35);
+}
+
+.hero figcaption {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    max-width: 420px;
+    font-size: clamp(0.9rem, 1.8vw, 1.5rem);
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--color-blanco);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================================================
+   BIENVENIDA
+   ========================================================= */
+#titulo-de-bienvenida {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 18px;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 20px 36px;
+    background-color: var(--color-blanco);
+}
+
+#titulo-de-bienvenida > header {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+#titulo-de-bienvenida h2 {
+    font-size: clamp(1.4rem, 2.6vw, 2rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+#titulo-de-bienvenida > header p {
+    margin-top: 4px;
+    font-family: var(--fuente-titulo);
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+}
+
+.bienvenida,
+.bienvenida2 {
+    font-size: 0.78rem;
+    line-height: 1.55;
+    text-align: left;
+}
+
+/* =========================================================
+   NUESTRO TRABAJO
+   ========================================================= */
+#titulo-de-trabajo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 190px));
+    justify-content: center;
+    gap: 6px 36px;
+    padding: 0 20px 60px;
+    background-color: var(--color-fondo);
+}
+
+#titulo-de-trabajo > h2 {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 36px 40px 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--color-linea);
+}
+
+#titulo-de-trabajo > h2 {
+    margin-bottom: 36px;
+}
+
+#titulo-de-trabajo article {
+    position: relative;
+    overflow: hidden;
+}
+
+#titulo-de-trabajo figure {
+    position: relative;
+    height: 290px;
+}
+
+#titulo-de-trabajo figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+#titulo-de-trabajo article:hover figure img {
+    transform: scale(1.05);
+}
+
+/* velo gris sobre cada foto */
+#titulo-de-trabajo figure::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(90, 90, 90, 0.28);
+    pointer-events: none;
+}
+
+/* titulo centrado sobre la imagen */
+#titulo-de-trabajo figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 58%;
+    z-index: 2;
+    text-align: center;
+}
+
+#titulo-de-trabajo figcaption h3 {
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--color-blanco);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+/* enlaces "Ver mas" */
+.ver-bodas,
+.ver-cumple,
+.ver-evento {
+    position: absolute;
+    left: 50%;
+    bottom: 44px;
+    z-index: 3;
+    transform: translateX(-50%);
+    width: 76%;
+    padding-bottom: 2px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--color-blanco);
+    border-bottom: 1px solid var(--color-blanco);
+    transition: letter-spacing 0.2s ease;
+}
+
+.ver-bodas:hover,
+.ver-cumple:hover,
+.ver-evento:hover {
+    letter-spacing: 0.06em;
+}
+
+/* =========================================================
+   INSTAGRAM
+   ========================================================= */
+#Instagram {
+    padding: 28px 20px;
+    text-align: center;
+    background-color: var(--color-blanco);
+}
+
+#Instagram h2 {
+    /* el h2 se mantiene en el HTML por semantica, se oculta visualmente */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+#Instagram p {
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
+}
+
+#Instagram .instagram-direct {
+    margin: 2px 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+#Instagram .instagram-direct a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.5fr;
+    align-items: center;
+    max-width: 100%;
+    padding: 24px 8% 12px;
+    background-color: var(--color-fondo);
+    border-top: 1px solid var(--color-linea);
+}
+
+.logo-pie a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.logo-pie img {
+    width: 110px;
+    height: auto;
+}
+
+.logo-pie p {
+    font-family: var(--fuente-titulo);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.navegacion-pie {
+    align-self: stretch;
+    padding: 12px 24px;
+    text-align: center;
+    border-left: 1px solid var(--color-linea);
+    border-right: 1px solid var(--color-linea);
+}
+
+.navegacion-pie h3 {
+    /* titulo "NAVEGACION" solo para accesibilidad */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.navegacion-pie ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.navegacion-pie a {
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+
+.navegacion-pie a:hover {
+    text-decoration: underline;
+}
+
+#contacto-pie {
+    padding: 12px 0 12px 32px;
+}
+
+#contacto-pie h3 {
+    margin-bottom: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.redes-contacto ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.redes-contacto a {
+    font-size: 0.78rem;
+    transition: opacity 0.2s ease;
+}
+
+.redes-contacto a:hover {
+    opacity: 0.6;
+}
+
+.derechos {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+    font-size: 0.6rem;
+    text-align: center;
+    color: #6b6b6b;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 900px) {
+    body > header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navegacion-cabecera ul {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #titulo-de-trabajo {
+        grid-template-columns: repeat(2, minmax(0, 220px));
+        gap: 28px;
+    }
+}
+
+@media (max-width: 640px) {
+    #titulo-de-bienvenida {
+        grid-template-columns: 1fr;
+    }
+
+    #titulo-de-trabajo {
+        grid-template-columns: minmax(0, 280px);
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .navegacion-pie {
+        border: 0;
+        border-top: 1px solid var(--color-linea);
+        border-bottom: 1px solid var(--color-linea);
+    }
+
+    #contacto-pie {
+        padding-left: 0;
+    }
+
+    .redes-contacto ul {
+        align-items: center;
+    }
+}

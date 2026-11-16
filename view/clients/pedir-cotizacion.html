@@ -1,8 +1,11 @@
+<!-- PAGINA DE PEDIR COTIZACION LUZ DE SANTIAGO -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pedir cotizacion - Luz de Santiago">
     <title>Pedir cotizacion | Luz de Santiago</title>
 </head>
 
@@ -96,8 +99,8 @@
 
                     <ul>
                         <li>
-                            <label>
-                                <input type="radio" name="disciplina" value="quinceaneras-cumpleanos" data-precio="500" checked>
+                            <label for="disciplina-cumpleanos">
+                                <input type="radio" id="disciplina-cumpleanos" name="disciplina" value="quinceaneras-cumpleanos" data-precio="500" checked>
 
                                 <figure>
                                     <img loading="lazy" src="../../routes/Material fotos/Cumpleanos/cumpleanos 2/foto1.jpg" width="324" height="168" alt="Nino sentado entre globos">
@@ -110,8 +113,8 @@
                         </li>
 
                         <li>
-                            <label>
-                                <input type="radio" name="disciplina" value="bodas-compromisos" data-precio="500">
+                            <label for="disciplina-boda">
+                                <input type="radio" id="disciplina-boda" name="disciplina" value="bodas-compromisos" data-precio="500">
 
                                 <figure>
                                     <img loading="lazy" src="../../routes/Material fotos/Bodas/Boda 1/FES05239.JPG" width="324" height="168" alt="Mujeres con ramos de flores en jardin">
@@ -124,8 +127,8 @@
                         </li>
 
                         <li>
-                            <label>
-                                <input type="radio" name="disciplina" value="fotografia-producto" data-precio="500">
+                            <label for="disciplina-producto">
+                                <input type="radio" id="disciplina-producto" name="disciplina" value="fotografia-producto" data-precio="500">
 
                                 <figure>
                                     <img loading="lazy" src="../../routes/Material fotos/Varios/comida rica/Retratos-de-platos.webp" width="324" height="168" alt="Plato de pasta muy apetitoso">
@@ -138,8 +141,8 @@
                         </li>
 
                         <li>
-                            <label>
-                                <input type="radio" name="disciplina" value="graducacion-retrato" data-precio="500" checked>
+                            <label for="disciplina-graduacion">
+                                <input type="radio" id="disciplina-graduacion" name="disciplina" value="graducacion-retrato" data-precio="500">
 
                                 <figure>
                                     <img loading="lazy" src="../../routes/Material fotos/Graduaciones/graduciones 1/DSC09433.JPG" width="324" height="168" alt="Mujeres graduadas posando con su diploma">
@@ -203,8 +206,9 @@
                                 </label>
                             </li>
                         </ul>
+                    </fieldset>
 
-                        <fieldset>
+                    <fieldset>
                             <legend>
                                 Curaduría y retoque Fine-Art
                                 <small>Archivos de máxima resolución</small>
@@ -243,7 +247,7 @@
                                     </label>
                                 </li>
                             </ul>
-                        </fieldset>
+                       </fieldset>
                 </fieldset>
 
                 <!-- PASO 3 -->
@@ -257,17 +261,19 @@
 
                     <ul>
                         <li>
-                            <input type="checkbox" name="extras" value="fotolibro" data-precio="120">
-                            <span>
-                                <strong>Fotolibro Fine-Art</strong>
-                                <small>Encuadernación artesanal en lino natural 30x30cm.</small>
-                            </span>
-                            <span>+$120</span>
+                            <label>
+                              <input type="checkbox" id="extras" name="extras" value="fotolibro" data-precio="120">
+                              <span>
+                                  <strong>Fotolibro Fine-Art</strong>
+                                  <small>Encuadernación artesanal en lino natural 30x30cm.</small>
+                              </span>
+                              <span>+$120</span>
                             </label>
                         </li>
 
                         <li>
-                            <input type="checkbox" name="extras" value="fotolibro" data-precio="180">
+                            <label>
+                            <input type="checkbox" id="extras1" name="extras1" value="fotolibro" data-precio="180">
                             <span>
                                 <strong>Fotografia Senior Adic.</strong>
                                 <small>>Doble perspectiva simultánea y momentos espontáneos.</small>
@@ -277,7 +283,8 @@
                         </li>
 
                         <li>
-                            <input type="checkbox" name="extras" value="fotolibro" data-precio="90">
+                            <label>
+                            <input type="checkbox" id="extras2" name="extras2" value="fotolibro" data-precio="90">
                             <span>
                                 <strong>Entrega Express</strong>
                                 <small>Galería digital privada completa en tiempo récord.</small>
@@ -287,7 +294,8 @@
                         </li>
 
                         <li>
-                            <input type="checkbox" name="extras" value="fotolibro" data-precio="120">
+                            <label>
+                            <input type="checkbox" id="extras3" name="extras3" value="fotolibro" data-precio="120">
                             <span>
                                 <strong>Fotolibro Fine-Art</strong>
                                 <small>Encuadernación artesanal en lino natural 30x30cm.</small>
@@ -332,18 +340,18 @@
 
                     <dl>
                         <div>
-                            <p>
+                            <dt>
                                 <span>
                                     <strong>Inversión estimada total</strong>
                                     <small>Impuestos y curaduría incluidos</small>
                                 </span>
                                 <output name="total" for="disciplina horas fotos extras">$780</output>
-                            </p>
+                            </dt>
 
-                            <p>
+                            <dt>
                                 <span>Reserva hoy con (30%)</span>
                                 <output name="anticipo">$234</output>
-                            </p>
+                            </dt>
                         </div>
                         <div>
                             <dt>Volumen: 50 Fotografias editadas</dt>
@@ -392,7 +400,7 @@
 
                 <div>
                     <label for="detalles">Locacion o detalles creativos *</label>
-                    <textarea name="detalles" id="detalles rows="8" placeholder="Lugar previsto, tematica, requisitos especiales o dudas sobre el cronograma..."></textarea>
+                    <textarea name="detalles" id="detalles" rows="8" placeholder="Lugar previsto, tematica, requisitos especiales o dudas sobre el cronograma..."></textarea>
                 </div>
 
                 <div>

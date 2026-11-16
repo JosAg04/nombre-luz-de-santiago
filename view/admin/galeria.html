@@ -1,8 +1,11 @@
+<!-- PAGINA DE GALERIA DE FOTOS LUZ DE SANTIAGO --->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria de fotos - Luz de Santiago - Admin">
     <title>Galeria de fotos | Luz de Santiago</title>
 </head>
 <body>
@@ -11,16 +14,19 @@
 
     <header>
         <a href="dashboard.html">
-            <img loading="lazy" src="" alt="Luz de Santiago">
+            <img loading="lazy" src="../../routes/inicio/isotipo.png" alt="Luz de Santiago">
         </a>
 
         <form role="search" action="#" method="get">
-            <input type="search" name="q">
+            <label for="buscador">Buscar</label>
+            <input type="search" id="buscador" name="buscador">
         </form>
 
         <p>Admin Control Panel</p>
-        <img loading="lazy" src="" alt="Perfil del administrador">
-  </header>
+        <img loading="lazy" src="../../routes/inicio/isotipo.png" alt="Perfil del administrador">
+    </header>
+
+  <!-- FIN HEADER -->
 
   <!-- INICIO ASIDE -->
 
@@ -32,12 +38,14 @@
         <li><a href="reservas.html">Reservas</a></li>
         <li><a href="usuarios.html">Usuarios</a></li>
         <li><a href="planes.html">Planes</a></li>
-        <li><a href="galerias.html" aria-current="page">Galerías</a></li>
+        <li><a href="galeria.html" aria-current="page">Galerías</a></li>
         <li><a href="notificacion.html">Notificaciones</a></li>
         <li><a href="contabilidad-resumen.html">Contabilidad</a></li>
       </ul>
     </nav>
   </aside>
+
+  <!-- FIN ASIDE -->
 
   <!-- INICIO MAIN -->
 
@@ -53,14 +61,14 @@
 
      <!-- FILTRO DE GALERIAS POR TIPO -->
 
-    <nav>
+    <nav aria-label="Administración-sesiones">
 
       <ul>
 
-        <li><button type="button" aria-pressed="true">Todos</button></li>
+        <li><button type="button" aria-pressed="true" aria-current="page">Todos</button></li>
         <li><button type="button" aria-pressed="false">Bodas</button></li>
-        <li><button type="button" aria-pressed="false">Cumpleanos</button></li>
-        <li><button type="button" aria-pressed="false">Quinceaneras</button></li>
+        <li><button type="button" aria-pressed="false">Cumpleaños</button></li>
+        <li><button type="button" aria-pressed="false">Quinceañeras</button></li>
         <li><button type="button" aria-pressed="false">Eventos</button></li>
         <li><button type="button" aria-pressed="false">Productos</button></li>
         <li><button type="button" aria-pressed="false">Graduaciones</button></li>
@@ -68,113 +76,63 @@
       </ul>
     </nav>
 
-    <section class="nueva-galeria">
+    <section class="nueva-galeria" aria-labelledby="titulo-nueva-galeria">
 
-        <h2>Crar nueva galeria</h2>
+    <h2 id="titulo-nueva-galeria">Crear nueva galería</h2>
 
-        <!-- FORMULARIO DE CREAR GALERIA -->
+    <form action="#" method="post" enctype="multipart/form-data">
 
-        <form action="#" method="post"></form>
+        <fieldset>
+            <legend>Datos de la galería</legend>
+
+            <label for="nombre">Nombre de la galería *</label>
+            <input type="text" id="nombre" name="nombre" required>
 
             <fieldset>
-                <legend>Datos de la galeria</legend>
+                <legend>Tipo de sesión</legend>
 
-                <label for="text">Nombre de la galeria</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre de galeria" required>
-
-                <fieldset>
-
-                    <legend>Tipo de sesion</legend>
-
-                    <label>
-                        <input type="radio" name="tipo-sesion" value="bodas" checked> Bodas
-                    </label>
-
-                    <label>
-                        <input type="radio" name="tipo-sesion" value="cumpleanos" checked> Cumpleanos
-                    </label>
-
-                    <label>
-                        <input type="radio" name="tipo-sesion" value="quinceaneras" checked> Quinceaneras
-                    </label>
-
-                    <label>
-                        <input type="radio" name="tipo-sesion" value="eventos" checked> Eventos
-                    </label>
-
-                    <label>
-                        <input type="radio" name="tipo-sesion" value="productos" checked> Productos
-                    </label>
-
-                    <label>
-                        <input type="radio" name="tipo-sesion" value="graduaciones" checked> Graduaciones
-                    </label>
-                </fieldset>
-
-                <label for="textarea">Descripcion</label>
-                <textarea name="descripcion" placeholder="Descripcion de la galeria."></textarea>
-
-                <label for="date">Fecha de la sesion</label>
-                <input type="date" name="fecha" value="2020-01-01">
-
-                <label for="text">Cliente</label>
-                <input type="text" name="cliente" placeholder="Nombre cliente">
-
-                <label>
-
-                    <input type="checkbox" name="publicar" checked> Publicar en la web
-
-                </label>
-
-                <label>
-
-                    <input type="checkbox" name="permitir-descarga"> Permitir "Descargar galería"
-                
-                </label>
-
-            </fieldset>
-            
-            <fieldset>
-
-                <legend>Fotos de la galeria</legend>
-                <small>Arrastra para ordenar</small>
-
-                <ul>
-                    <li>
-                        <figure>
-                            <img loading="lazy" src="" alt="foto de portada">
-                            <figcaption><mark>Portada</mark></figcaption>
-                        </figure>
-                    </li>
-
-                    <li><img loading="lazy" src="" alt="foto 2"></li>
-                    <li><img loading="lazy" src="" alt="foto 3"></li>
-                    <li><img loading="lazy" src="" alt="foto 4"></li>
-                    <li><img loading="lazy" src="" alt="foto 5"></li>
-                    <li><img loading="lazy" src="" alt="foto 6"></li>
-                    <li><img loading="lazy" src="" alt="foto 7"></li>
-                    <li><img loading="lazy" src="" alt="foto 8"></li>
-                </ul>
-
-                <label for="file">
-
-                    Arrastra aquí más fotos o <b>búscalas en tu equipo</b> · JPG o PNG
-
-                </label>
-
-                <input type="file" name="fotos" accept="image/jpeg,image/png" multiple>
-
+                <label><input type="radio" name="sesion" value="bodas" checked> Bodas</label>
+                <label><input type="radio" name="sesion" value="cumpleanos"> Cumpleaños</label>
+                <label><input type="radio" name="sesion" value="quinceaneras"> Quinceañeras</label>
+                <label><input type="radio" name="sesion" value="eventos"> Eventos</label>
+                <label><input type="radio" name="sesion" value="productos"> Productos</label>
+                <label><input type="radio" name="sesion" value="graduaciones"> Graduaciones</label>
             </fieldset>
 
-            <button type="button">Cancelar</button>
-            <button type="submit" name="accion" value="borrador">Guardar borrador</button>
-            <button type="submit" name="accion" value="guardar">Guardar cambios</button>
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" name="descripcion"></textarea>
 
-        </form>
+            <label for="fecha">Fecha de la sesión</label>
+            <input type="date" id="fecha" name="fecha">
 
-        <p>Las galerias publicada aparecen automaticamente en la seccion Galeria de la web.</p>
+            <label for="cliente">Cliente</label>
+            <input type="text" id="cliente" name="cliente">
 
-    </section>
+            <label><input type="checkbox" name="publicar" checked> Publicar en la web</label>
+            <label><input type="checkbox" name="permitir-descarga"> Permitir "Descargar galería"</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Fotos de la galería</legend>
+            <small>Arrastra para ordenar</small>
+
+            <ul>
+                <!-- miniaturas -->
+            </ul>
+
+            <label for="fotos">Agregar fotos · JPG o PNG</label>
+            <input type="file" id="fotos" name="fotos" accept="image/jpeg,image/png" multiple>
+        </fieldset>
+
+        <button type="button">Cancelar</button>
+        <button type="submit" name="accion" value="borrador">Guardar borrador</button>
+        <button type="submit" name="accion" value="guardar">Guardar cambios</button>
+
+    </form>
+
+    <p>Las galerías publicadas aparecen automáticamente en la sección Galería de la web.</p>
+
+</section>
 
     <section class="galerias-publicadas">
 
@@ -188,7 +146,7 @@
                 <article>
                     <p><small>Tipos</small></p>
                     <figure>
-                        <img loading="lazy" src="" alt="Imagen de portada">
+                        <img loading="lazy" src="../../public/img/foto1.png" alt="Imagen de portada">
                     </figure>
                     <h3>Nombre de la galeria</h3>
                     <p>0 fotos · <time datetime="2026-01-01">0 Ene</time> · <strong>Publicada</strong></p>
@@ -201,7 +159,7 @@
                 <article>
                     <p><small>Tipos</small></p>
                     <figure>
-                        <img loading="lazy" src="" alt="Imagen de portada">
+                        <img loading="lazy" src="../../public/img/foto1.png" alt="Imagen de portada">
                     </figure>
                     <h3>Nombre de la galeria</h3>
                     <p>0 fotos · <time datetime="2026-01-01">0 Ene</time> · <strong>Publicada</strong></p>
@@ -214,7 +172,7 @@
                 <article>
                     <p><small>Tipos</small></p>
                     <figure>
-                        <img loading="lazy" src="" alt="Imagen de portada">
+                        <img loading="lazy" src="../../public/img/foto1.png" alt="Imagen de portada">
                     </figure>
                     <h3>Nombre de la galeria</h3>
                     <p>0 fotos · <time datetime="2026-01-01">0 Ene</time> · <strong>Publicada</strong></p>
@@ -227,7 +185,7 @@
                 <article>
                     <p><small>Tipos</small></p>
                     <figure>
-                        <img loading="lazy" src="" alt="Imagen de portada">
+                        <img loading="lazy" src="../../public/img/foto1.png" alt="Imagen de portada">
                     </figure>
                     <h3>Nombre de la galeria</h3>
                     <p>0 fotos · <time datetime="2026-01-01">0 Ene</time> · <strong>Publicada</strong></p>
@@ -240,7 +198,7 @@
                 <article>
                     <p><small>Tipos</small></p>
                     <figure>
-                        <img loading="lazy" src="" alt="Imagen de portada">
+                        <img loading="lazy" src="../../public/img/foto1.png" alt="Imagen de portada">
                     </figure>
                     <h3>Nombre de la galeria</h3>
                     <p>0 fotos · <time datetime="2026-01-01">0 Ene</time> · <strong>Publicada</strong></p>
@@ -253,7 +211,7 @@
                 <article>
                     <p><small>Tipos</small></p>
                     <figure>
-                        <img loading="lazy" src="" alt="Imagen de portada">
+                        <img loading="lazy" src="../../public/img/foto1.png" alt="Imagen de portada">
                     </figure>
                     <h3>Nombre de la galeria</h3>
                     <p>0 fotos · <time datetime="2026-01-01">0 Ene</time> · <strong>Publicada</strong></p>
@@ -266,7 +224,7 @@
                 <article>
                     <p><small>Tipos</small></p>
                     <figure>
-                        <img loading="lazy" src="" alt="Imagen de portada">
+                        <img loading="lazy" src="../../public/img/foto1.png" alt="Imagen de portada">
                     </figure>
                     <h3>Nombre de la galeria</h3>
                     <p>0 fotos · <time datetime="2026-01-01">0 Ene</time> · <strong>Publicada</strong></p>
@@ -279,7 +237,7 @@
                 <article>
                     <p><small>Tipos</small></p>
                     <figure>
-                        <img loading="lazy" src="" alt="Imagen de portada">
+                        <img loading="lazy" src="../../public/img/foto1.png" alt="Imagen de portada">
                     </figure>
                     <h3>Nombre de la galeria</h3>
                     <p>0 fotos · <time datetime="2026-01-01">0 Ene</time> · <strong>Publicada</strong></p>
@@ -289,10 +247,25 @@
             </li>
 
         </ul>
+    
+        <nav aria-label="Paginacion de galerias publicadas">
+          
+          <ul>
+            <li><span aria-disabled="true">Anterior</span></li>
+            <li><a href="galeria.html?pagina=1" aria-label="pagina 1" aria-current="page">1</a></li>
+            <li><a href="galeria.html?pagina=1" aria-label="pagina 2">2</a></li>
+            <li><a href="galeria.html?pagina=1" aria-label="pagina 3">3</a></li>
+            <li><a href="galeria.html?pagina=2" rel="next">Siguiente</a></li>
+          </ul>
+
+
+        </nav>
 
     </section>
 
   </main>
+
+  <!-- FIN MAIN -->
 
   <!-- INICIO FOOTER -->
 
@@ -301,6 +274,8 @@
     <small>&copy; Luz de Santiago Estudio Fotográfico · Todos los derechos reservados</small>
 
   </footer>
-    
+  
+  <!-- FIN FOOTER -->    
+
 </body>
 </html>

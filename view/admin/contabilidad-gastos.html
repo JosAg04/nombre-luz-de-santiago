@@ -1,8 +1,11 @@
+<!-- PAGINA CONTABILIDAD GASTOS DE SANTIAGO --->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contabilidad Gastos - Luz de Santiago">
     <title>Contabilidad Gastos | Luz de Santiago Admin</title>
 </head>
 <body>
@@ -11,16 +14,17 @@
 
     <header>
         <a href="dashboard.html">
-            <img loading="lazy" src="" alt="Luz de Santiago">
+            <img loading="lazy" src="../../routes/inicio/isotipo.png" alt="Luz de Santiago">
         </a>
 
         <form role="search" action="#" method="get">
-            <input type="search" name="q">
+            <label for="buscador">Buscar</label>
+            <input type="search" id="buscador" name="buscador">
         </form>
 
         <p>Admin Control Panel</p>
-        <img loading="lazy" src="" alt="Perfil del administrador">
-  </header>
+        <img loading="lazy" src="../../routes/inicio/isotipo.png" alt="Perfil del administrador">
+   </header>
 
   <!-- INICIO ASIDE -->
 
@@ -32,9 +36,9 @@
         <li><a href="reservas.html">Reservas</a></li>
         <li><a href="usuarios.html">Usuarios</a></li>
         <li><a href="planes.html">Planes</a></li>
-        <li><a href="galerias.html">Galerías</a></li>
+        <li><a href="galeria.html">Galerías</a></li>
         <li><a href="notificacion.html">Notificaciones</a></li>
-        <li><a href="contabilidad-resumen.html aria-current="page">Contabilidad</a></li>
+        <li><a href="contabilidad-resumen.html" aria-current="true">Contabilidad</a></li>
       </ul>
     </nav>
   </aside>
@@ -53,7 +57,7 @@
 
      <!-- FILTRO DE CONTABILIDAD -->
 
-    <nav>
+    <nav aria-label="Contabilidad">
 
       <ul>
 
@@ -117,7 +121,7 @@
             <dl>
               <dt>Sin comprobante</dt>
               <dd><data value="0">0</data></dd>
-              <dd><small>Adjuntar NCF</small></dd>
+              <dd><small>Adjuntar <abbr title="Numero de Comprobante Fiscal">NCF</abbr></small></dd>
             </dl>
             
           </article>
@@ -133,11 +137,16 @@
 
       <!-- SECCION LISTADO DE GASTOS -->
  
-      <form action="#" method="get">
+      <form action="#" method="post" enctype="multipart/form-data">
+      
+        <fieldset>
 
-        <button type="button">Categoria →</button>
-        <button type="button">Fecha →</button>
-        <button type="button">Exportar →</button>
+          <legend>Registrar gasto</legend>
+            <button type="button">Categoria →</button>
+            <button type="button">Fecha →</button>
+            <button type="button">Exportar →</button>
+        
+        </fieldset>
 
       </form>
  
@@ -216,6 +225,101 @@
       </table>
 
     </section>
+
+    <section aria-label="registrar-gasto">
+
+      <h2>Registrar gasto</h2>
+
+      <form action="#" method="post" enctype="multipart/form-data">
+
+        <p><small>Los campos con * son obligatorios.</small></p>
+
+        <div>
+          <label for="descripcion">Descripcion *</label>
+          <input type="text" id="descripcion" name="descripcion" placeholder="Descripcion del gasto" required>
+        </div>
+
+        <div>
+          <label for="monto">Monto *</label>
+          <input type="number" id="monto" name="monto" inputmode="decimal"  min="0" step="0.01" placeholder="1455.00" required>
+        </div>
+
+        <div>
+          <label for="fecha">Fecha *</label>
+          <input type="date" name="fecha" id="fecha" required>
+        </div>
+
+        <div>
+          <label for="categoria">Categoria *</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Selecciona una categoria</option>
+            <option value="impresion-libros">Impresion y libros</option>
+            <option value="transporte">Transporte</option>
+            <option value="marketing">Marketing</option>
+            <option value="equipo-mantenimiento">Equipo y mantenimiento</option>
+            <option value="servicios">Servicios</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="proveedor">Proveedor *</label>
+          <input type="text" name="proveedor" id="proveedor" placeholder="Nombre del proveedor" required>
+        </div>
+
+        <div>
+          <label for="ncf"><abbr title="Numero de Comprobante Fiscal">NCF</abbr> *</label>
+          <input type="text" name="ncf" id="ncf" maxlength="11" placeholder="B0100000522" aria-describedby="ayuda-ncf">
+          <small id="ayuda-ncf">Una B seguida de 10 digitos.</small>
+        </div>
+
+        <div>
+          <label for="recibo">Adjuntar recibo *</label>
+          <input type="file" id="recibo" name="recibo" accept="image/*,application/pdf" aria-describedby="ayuda-recibo" required>
+          <small id="ayuda-recibo">Foto o PDF del comprobante.</small>
+        </div>
+
+        <div>
+          <button type="reset">Cancelar</button>
+          <button type="submit">Registrar gasto</button>
+        </div>
+      </form>
+
+    </section>
+
+    <aside aria-label="Gastos registrados">
+
+      <h2>Gastos Registrados</h2>
+
+      <p><strong>Descripcion del gasto</strong></p>
+
+      <dl>
+        <div>
+          <dt>Total del gasto</dt>
+          <dd><output name="total-gasto"><strong>$0.00</strong></output></dd>
+        </div>
+
+        <div>
+          <dt>Fecha</dt>
+          <dd><time datetime="2025-01-01"><strong>01/Ene/2025</strong></time></dd>
+        </div>
+
+        <div>
+          <dt>Categoria</dt>
+          <dd>Servicios</dd>
+        </div>
+
+        <div>
+          <dt>Proveedor</dt>
+          <dd>Nombre</dd>
+        </div>
+
+        <div>
+          <dt><abbr title="Número de Comprobante Fiscal">NCF</abbr></dt>
+          <dd>B0100000522</dd>
+        </div>
+      </dl>
+
+    </aside>
 
     <section class="pagos=equipo">
 
@@ -306,6 +410,8 @@
 
   </main>
 
+    <!-- FIN MAIN -->
+
     <!-- INICIO FOOTER -->
 
   <footer>
@@ -313,6 +419,8 @@
     <small>&copy; Luz de Santiago Estudio Fotográfico · Todos los derechos reservados</small>
 
   </footer>
+
+  <!-- FIN FOOTER -->
     
 </body>
 </html>

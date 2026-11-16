@@ -1,8 +1,12 @@
+<!-- PAGINA DE INICIAR SESION LUZ DE SANTIAGO - ADMINISTRACION --->
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Iniciar sesion - Luz de Santiago - ADMIN">
     <title>Login | Luz de Santiago Admin</title>
 </head>
 <body>
@@ -14,7 +18,7 @@
         <img loading="lazy" src="../../routes/inicio/isotipo.png" width="100" height="50" alt="logo Luz de Santiago Estudio Fotografico">
         <p>Estudio Fotografico</p>
 
-        <h1>Panel de administracion &amp; Gestion</h1>
+        <p>Panel de administracion &amp; Gestion</p>
 
         <small>© LUZ DE SANTIAGO ESTUDIO FOTOGRAFICO · TODOS LOS DERECHOS RESERVADOS</small>
     </aside>
@@ -28,18 +32,21 @@
             <div>
 
                 <p>Acceso del equipo</p>
-                <h1>Iniciar sesion</h1>
-                <p>Ingresa con tu contrasena para continuar</p>
+                <h1>Iniciar sesión</h1>
+                <p>Ingresa con tu contraseña para continuar</p>
 
-                <form action="dashboard.html">
+                <form action="dashboard.html" method="post">
 
                     <label for="email">Correo electronico *</label>
-                    <input type="email" name="email" placeholder="Ejemplo@gmail.com" required>
+                    <input type="email" id="email" name="email" placeholder="Ejemplo@gmail.com" autocomplete="email" required>
+                    
+                    
 
-                    <label for="password">Contrasena *</label>
-                    <input type="password" name="password" placeholder="********" required>
-
-                    <p><a href="recuperar-contrasena.html">¿Olvidaste tu contrasena?</a></p>
+                    <label for="password">Contraseña *</label>
+                    <input type="password" id="password" name="password" placeholder="********" autocomplete="current-password" required>
+      
+                    <p><button type="button">Mostrar</button></p>
+                    <p><a href="recuperar-contrasena.html">¿Olvidaste tu contraseña?</a></p>
 
                     <button type="submit">Entrar al panel</button>
                 </form>

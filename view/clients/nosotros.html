@@ -1,140 +1,180 @@
+<!-- PAGINA DE INICIO LUZ DE SANTIAGO --->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luz de Santiago | Nosotros</title>
-</head>
+    <meta name="description" content="Inicio Luz de Santiago">
+    <title>Luz de Santiago | Inicio</title>
+    <link rel="stylesheet" href="../../public/css/global.css">
 
+</head>
 <body>
 
     <!-- INICIO HEADER -->
-
-     <header>
-        <a href="inicio.html">
-            <img loading="lazy" src="../../routes/inicio/isotipo.png" width="100" height="50" alt="Logotipo Luz de Santiago">
-            <p>LUZ DE SANTIAGO</p>
-        </a>
+    
+<header>
+    <a href="index.html" class="logo-cabecera">  
+        <img loading="lazy" src="../../routes/inicio/isotipo.png" width="100" height="50" alt="logo Luz de Santiago Estudio Fotografico">
+        <p class="titulo-cabecera">Luz de Santiago</p>
+    </a>
 
         <!-- MENU DE NAVEGACION -->
 
-        <nav aria-label="Navegación principal">
-            <ul>
-                <li><a href="inicio.html">INICIO</a></li>
-                <li><a href="tipos-sesion.html">TIPOS DE SESION</a></li>
-                <li><a href="planes.html">PLANES</a></li>
-                <li><a href="galeria.html">GALERIA</a></li>
-                <li><a href="nosotros.html" aria-current="page">NOSOTROS</a></li>
-                <li><a href="contacto.html">CONTACTO</a></li>
-            </ul>
-        </nav>
+    <nav aria-label="Navegacion principal" class="navegacion-cabecera">
+        <ul>
+            <li><a href="index.html" aria-current="page">INICIO</a></li>
+            <li><a href="tipos-sesion.html">TIPOS DE SESION</a></li>
+            <li><a href="planes.html">PLANES</a></li>
+            <li><a href="galeria.html">GALERIA</a></li>
+            <li><a href="nosotros.html">NOSOTROS</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
 
-        <a href="planes.html">Solicitar planes</a>
-    </header>
+    <a href="planes.html" class="planes"><p>Solicitar planes</p></a>
+</header>
 
     <!-- FIN HEADER -->
 
     <!-- INICIO MAIN -->
 
-    <main>
+<main>
 
-        <div class="Presentación-principal">
+    <section id="Presentacion-principal">
+        <figure class="hero">
+            <img loading="lazy" src="../../routes/inicio/hero-bebe.jpg" width="250" height="150" alt="Hero bebe recien nacido">
+            <figcaption>
+                <h1>LA FOTOGRAFIA, UNA FORMA DE PLASMAR RECUERDOS</h1>
+            </figcaption>
+        </figure>
+    </section>
 
-            <figure>
+    <section id="titulo-de-bienvenida">
+        <header>
+            <h2>BIENVENIDO A LUZ DE SANTIAGO</h2>
+            <p>MAS QUE FOTOS, EMOCIONES CAPTURADAS</p>
+        </header>
 
-                <img loading="lazy" src="../../routes/Material fotos/banner.jpg" width="1440" height="288" alt="Fotógrafo trabajando en un estudio con equipo de iluminación">
+        <p class="bienvenida">En nuestro estudio de fotografía, capturamos la esencia de tus momentos más preciados. 
+            Ya sea una sesión familiar, de maternidad, o un retrato personal, entendemos la importancia de preservar estos instantes únicos con imágenes de alta calidad.
+           Nuestro equipo se dedica a crear una atmósfera relajada y cómoda, asegurándose de que disfrutes cada momento de la sesión.</p>
 
-                <figcaption>
+        <p class="bienvenida2">Ofrecemos una variedad de accesorios, fondos y escenarios personalizados que reflejan tu estilo y personalidad única. Creemos que cada foto cuenta una historia, y nuestro objetivo es capturar las emociones y conexiones genuinas que hacen que la tuya sea especial. Te ayudamos a crear recuerdos atemporales que tú y tus seres queridos atesorarán por años. Ven y vive una experiencia fotográfica llena de alegría, amor y memorias duraderas.</p>
 
-                    <h1>Sobre Nosotros</h1>
-                    <p>CONOCE UN POCO MAS SOBRE NOSOTROS</p>
+        
+        </section>
 
-                </figcaption>
+        <section id="titulo-de-trabajo">
+            <h2>NUESTRO TRABAJO</h2>
 
-            </figure>
-
-        </div>
-
-        <div class="nosotros-titulo">
-
-            <figure>
-
-                <img loading="lazy" src="../../routes/Material fotos/hero-nosotros.jpg" width="525" height="735" alt="Ron Damon, fotógrafo principal de Luz de Santiago, sosteniendo una cámara">
-
-            </figure>
-
-            <article>
-
-                <h2>BIENVENIDOS A LUZ DE SANTIAGO</h2>
-
-                <p>En Luz de Santiago, liderado por el fotógrafo principal Ron Damon, capturamos la esencia de cada momento especial. Nuestro estudio está diseñado para crear experiencias únicas y recuerdos inolvidables, cuidadosamente elaborados que se adaptan a cada ocasión. Desde escenas navideñas llenas de encanto hasta espacios glamurosos y acogedores, ofrecemos el escenario perfecto para cada sesión.</p>
-
-                <p>¡Permítenos ser parte de tus historias y transformar tus recuerdos en obras de arte que atesorarás por siempre!</p>
-
-                <a href="contacto.html" role="button">Contactanos</a>
-
+            <article class="boda">
+                <a href="galeria.html" class="ver-bodas">
+                  <figure>
+                      <img loading="lazy" src="../../routes/inicio/imagen-boda.JPG" width="150" height="175" alt="Pareja recien casada">
+                        <figcaption class="titulo-bodas">
+                          <h3>BODAS</h3>
+                        </figcaption>
+                  </figure>
+                  <p>Ver mas</p>
+                </a>
             </article>
 
-        </div>
+            <article class="cumple">
+                <a href="galeria.html" class="ver-cumple">
+                  <figure>
 
-        <div class="Instagram">
+                      <img loading="lazy" src="../../routes/inicio/imagen-cumpleanos.JPG" width="150" height="175" alt="Nino celebrando su cumpleanos">
 
+                      <figcaption class="titulo-cumple">
+
+                          <h3>CUMPLEAÑOS</h3>
+
+                      </figcaption>
+
+                  </figure>
+                <p>Ver mas</p>
+                </a>
+            </article>
+
+            <article class="eventos">
+          
+                 <a href="galeria.html" class="ver-evento">
+                  <figure>
+
+                      <img loading="lazy" src="../../routes/inicio/imagen-eventos.JPG" width="150" height="175" alt="Decoracion de salon de eventos">
+
+                      <figcaption class="titulo-evento">
+
+                          <h3>EVENTOS</h3>
+
+                      </figcaption>
+
+                  </figure>
+                  <p>Ver mas</p>
+                </a>
+
+            </article>
+            
+        </section>
+
+        <section id="Instagram">
+
+            <h2>INSTAGRAM</h2>
             <p>SIGUENOS EN INSTAGRAM</p>
-            <p><a href="https://instagram.com/luzdesantiago">@LUZDESANTIAGO</a></p>
+            <p class="instagram-direct"><a href="https://www.instagram.com/luzdesantiago/" target="_blank">@LUZDESANTIAGO</a></p>
             <p>Conoce mas de nuestro trabajo</p>
 
-        </div>
-
+        </section>
+    
     </main>
 
-    <!-- FIN MAIN -->
+        <!-- FIN MAIN -->
 
-    <!-- INICIO FOOTER -->
+        <!-- INICIO FOOTER -->
 
     <footer>
 
-        <address>
+        <address class="logo-pie">
             <a href="index.html">
-                <img loading="lazy" src="logo-luz-santiago.png" alt="logo Luz de Santiago Estudio Fotografico">
+                <img loading="lazy" src="../../routes/inicio/isotipo.png" width="100" height="50" alt="logo Luz de Santiago Estudio Fotografico">
                 <p>LUZ DE SANTIAGO - ESTUDIO FOTOGRÁFICO</p>
             </a>
         </address>
 
-        <!-- NAVEGACION PIE DE PAGINA -->
+            <!-- MENU DE NAVEGACION DEL PIE DE PAGINA -->
         
-        <nav aria-label="Navegacion del pie de pagina">
+        <nav aria-label="Navegacion del pie de pagina" class="navegacion-pie">
         <h3>NAVEGACIÓN</h3>
             <ul>
-                <li><a href="index.html">INICIO</a></li>
+                <li><a href="index.html" aria-current="page">INICIO</a></li>
                 <li><a href="planes.html">PLANES</a></li>
                 <li><a href="tipos-sesion.html">TIPOS DE SESION</a></li>
                 <li><a href="galeria.html">GALERIA</a></li>
-                <li><a href="nosotros.html" aria-current="page">NOSOTROS</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
                 <li><a href="contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
 
         <!-- INFORMACION DE CONTACTO -->
 
-        <div>
-            <h3>PARA MAS INFORMACIÓN</h3>
-        <address>
-            
-            <uL>
-                <li><a href="tel:+18291234567">829-123-4567</a></li>
-                <li><a href="mailto:luzsantiago@gmail.com">luzsantiago@gmail.com</a></li>
-                <li><a href="https://facebook.com/luzdesantiago">Facebook</a></li>
-                <li><a href="https://instagram.com/luzdesantiago">Instagram</a></li>
-            </uL>
-        </address>
+        <div id="contacto-pie">
+                <h3>PARA MAS INFORMACIÓN</h3>
+            <address class="redes-contacto">
+                
+                <ul>
+                    <li><a href="tel:+18291234567">829-123-4567</a></li>
+                    <li><a href="mailto:luzsantiago@gmail.com">luzsantiago@gmail.com</a></li>
+                    <li><a href="https://facebook.com/luzdesantiago">Facebook</a></li>
+                    <li><a href="https://instagram.com/luzdesantiago">Instagram</a></li>
+                </ul>
+            </address>
         </div>
         
-        <p>&copy; LUZ DE SANTIAGO ESTUDIO FOTOGRAFICO - TODOS LOS DERECHOS RESERVADOS</p>
+        <p class="derechos">&copy; LUZ DE SANTIAGO ESTUDIO FOTOGRAFICO - TODOS LOS DERECHOS RESERVADOS</p>
 
     </footer>
 
 </body>
-
-
-
 </html>
