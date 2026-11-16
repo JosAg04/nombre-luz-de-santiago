@@ -1,11 +1,9 @@
-Estudio fotográfico · Un estudio hace sesiones de quinceaños, bodas, productos y fotos de graduación.
-
 
  ==========================================
         DESCRIPCION DEL PROYECTO
  ==========================================
 
-Farmacia La Esperanza App movil y sitio web, disenado para pedir medicamentos de forma concreat. Enfocada en adultos mayores con vision reducida y poco entendimiento de la tecnlogia.
+Luz de Santiago - Estudio Fotografico. Una pagina web creada para ver las sesiones fotograficas disponibles con sus precios a la par, cotizar en tiempo real y observar los trabajos/sesiones realizadas por el estudio en una galeria digital.
 
  ==========================================
         ESTRUCTURA DE LAS CARPETAS
