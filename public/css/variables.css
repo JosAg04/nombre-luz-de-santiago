@@ -1,0 +1,47 @@
+/*=============================
+     Hoja de estilo variables 
+===============================*/
+
+/*=======================
+        VARIABLES 
+ =======================*/
+
+ :root {
+    --color-fondo: #FFFFFF; /* Color para el fondo de la pagina */
+    --color-primario: #121212; /* Color principal de la pagina */
+    --color-secundario: #C5A880; /* Color secundario de la pagina para botones */
+    --color-neutro: #333333; /* Neutral 1 */
+    --color-neutro-2: #F3F0F0             ; /* Neutral 2 */
+
+    --color-header-footer: #F3F0F0 ; /* color para el encabezado/pie */
+    --color-fondo-card: #F2F1ED; /* fondo de secciones y tarjetas */
+    --color-titulo: black; /* Titulos h2 */
+    --color-titulo-secundario: black; /* Titulos h3 secundario */
+    --color-texto: #313030; /* texto general en la pagina */
+    --color-resaltado: #725B38; /* precios y textos resaltados */
+    --color-placeholder: #C2C2C2; /* color barras de busquedas/inputs */
+    --color-bordes: #E0E0E0; /* color para bordes */
+    --color-texto-secundario: #C7C7C3; /* color para subtextos */
+    --color-texto-marcado: #FEDEB2; /* color para marcados de texto */
+
+    --color-texto-alerta: #7C3434; /* texto de alerta/carrito */
+    --color-texto-fuerte-alerta: #7C3434; /* texto fuerte para alertas */
+    --color-fondo-alerta: #7C3434; /* fondo para botones/tarjetas alertas */
+    --color-texto-positivo: #85C087; /* color de texto positivo/estados */
+    --color-fondo-positivo: #85C087; /* fondo de estado positvo, botones y tarjetas */
+   
+    --fuente-texto-titulos: "Playfair Display", 'Arial', sans-serif;
+    --fuente-texto-cuerpo: "Inter", 'Arial', sans-serif;
+    --texto-light: 300;
+    --texto-regular: 400;
+    --texto-medium: 500;
+    --texto-semibold: 600;
+    --texto-bold: 700;
+    --texto-extrabold: 800; /* Todos los pesos usados en la pagina */
+
+    --radio-comun: 1.25rem; /* tarjetas, botones, inputs */
+    --radio-2: 1.875rem; /* barras de busquedas, formularios */
+    --radio-pildora: 999px; /* badge de ofertas o botones tipo pildora */
+    --borde-base: 1px solid var(--color-placeholder);
+    --pad-pagina: clamp(1rem, 5vw, 3rem);
+ }
