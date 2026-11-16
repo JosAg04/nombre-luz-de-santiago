@@ -1,8 +1,11 @@
+<!-- RESERVAS Y COTIZACIONES LUZ DE SANTIAGO --->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reservas y Cotizaciones - Luz de Santiago - Admin">
     <title>Reservas y Cotizaciones | Luz de Santiago</title>
 </head>
 <body>
@@ -11,15 +14,16 @@
 
     <header>
         <a href="dashboard.html">
-            <img loading="lazy" src="" alt="Luz de Santiago">
+            <img loading="lazy" src="../../routes/inicio/isotipo.png" alt="Luz de Santiago">
         </a>
 
         <form role="search" action="#" method="get">
-            <input type="search" name="q">
+            <label for="buscador">Buscar</label>
+            <input type="search" id="buscador" name="buscador">
         </form>
 
         <p>Admin Control Panel</p>
-        <img loading="lazy" src="" alt="Perfil del administrador">
+        <img loading="lazy" src="../../routes/inicio/isotipo.png" alt="Perfil del administrador">
   </header>
 
   <!-- INICIO ASIDE -->
@@ -32,12 +36,14 @@
         <li><a href="reservas.html" aria-current="page">Reservas</a></li>
         <li><a href="usuarios.html">Usuarios</a></li>
         <li><a href="planes.html">Planes</a></li>
-        <li><a href="galerias.html">Galerías</a></li>
+        <li><a href="galeria.html">Galerías</a></li>
         <li><a href="notificacion.html">Notificaciones</a></li>
         <li><a href="contabilidad-resumen.html">Contabilidad</a></li>
       </ul>
     </nav>
   </aside>
+
+  <!-- FIN ASIDE -->
 
   <!-- INICIO MAIN -->
 
@@ -74,7 +80,8 @@
 
         <form action="#" method="get">
 
-            <input type="search" name="q" id="">
+            <label for="buscar-reservas">Buscar</label>
+            <input type="search" id="buscar-reservas" name="buscar-reservas" id="">
             <button type="button">Fecha -></button>
             <button type="button">Fotografo -></button>
             <button type="button">Exportar -></button>
@@ -181,9 +188,9 @@
 
             <div>
 
-                <img loading="lazy" src="" alt="foto de cliente">
+                <img loading="lazy" src="../../routes/inicio/isotipo.png" alt="foto de cliente">
                 <h3>Nombre cliente</h3>
-                <p><a href="8291234567">829-123-4567</a></p>
+                <p><a href="tel:+18291234567">829-123-4567</a></p>
                 <strong>Pendiente</strong>
 
             </div>
@@ -239,9 +246,9 @@
 
             <div>
 
-                <img loading="lazy" src="" alt="foto de cliente">
+                <img loading="lazy" src="../../routes/inicio/isotipo.png" alt="foto de cliente">
                 <h3>Nombre cliente</h3>
-                <p><a href="8291234567">829-123-4567</a></p>
+                <p><a href="tel:+18291234567">829-123-4567</a></p>
                 <strong>Pendiente</strong>
 
             </div>
@@ -297,9 +304,9 @@
 
             <div>
 
-                <img loading="lazy" src="" alt="foto de cliente">
+                <img loading="lazy" src="../../routes/inicio/isotipo.png" alt="foto de cliente">
                 <h3>Nombre cliente</h3>
-                <p><a href="8291234567">829-123-4567</a></p>
+                <p><a href="tel:+18291234567">829-123-4567</a></p>
                 <strong>Pendiente</strong>
 
             </div>
@@ -355,6 +362,8 @@
 
   </main>
 
+  <!-- FIN MAIN -->
+
   <!-- INICIO FOOTER -->
 
   <footer>
@@ -362,6 +371,8 @@
     <small>&copy; Luz de Santiago Estudio Fotográfico · Todos los derechos reservados</small>
 
   </footer>
+
+  <!-- FIN FOOTER -->
     
 </body>
 </html>

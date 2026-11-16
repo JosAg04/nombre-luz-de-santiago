@@ -1,8 +1,11 @@
+<!-- PAGINA RECUPERAR CONTRASENA LUZ DE SANTIAGO - ADMIN --->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recuperar contrasena - Luz de Santiago - Admin">
     <title>Recuperar Contrasena | Luz de Santiago Admin</title>
 </head>
 <body>
@@ -14,7 +17,7 @@
         <img loading="lazy" src="../../routes/inicio/isotipo.png" width="100" height="50" alt="logo Luz de Santiago Estudio Fotografico">
         <p>Estudio Fotografico</p>
 
-        <h1>Panel de administracion &amp; Gestion</h1>
+        <p>Panel de administracion &amp; Gestion</p>
 
         <small>© LUZ DE SANTIAGO ESTUDIO FOTOGRAFICO · TODOS LOS DERECHOS RESERVADOS</small>
 
@@ -26,14 +29,14 @@
 
         <section class="recuperar">
 
-            <p>Recuperar contrasena</p>
+            <p>Recuperar contraseña</p>
             <h1>Ingresa tu correo</h1>
             <p>Ingresa tu correo para la recuperacion</p>
 
             <form action="recuperar-codigo.html" method="post">
 
-                <label for="email">Correo electronico *</label>
-                <input type="email" name="email" placeholder="Ejemplo@gmail.com" required>
+                <label for="email" >Correo electronico *</label>
+                <input type="email" id="email" name="email" placeholder="Ejemplo@gmail.com" autocomplete="email"required>
 
                 <button type="submit">Continuar</button>
 

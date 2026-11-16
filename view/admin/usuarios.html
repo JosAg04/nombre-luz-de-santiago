@@ -1,8 +1,11 @@
+<!-- PAGINA USUARIOS Y PERMISOS LUZ DE SANTIAGO --->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Usuarios y permisos - Luz de Santiago - Admin">
     <title>Usuarios y permisos | Luz de Santiago</title>
 </head>
 <body>
@@ -11,16 +14,19 @@
 
     <header>
         <a href="dashboard.html">
-            <img loading="lazy" src="" alt="Luz de Santiago">
+            <img loading="lazy" src="../../routes/inicio/isotipo.png" alt="Luz de Santiago">
         </a>
 
         <form role="search" action="#" method="get">
-            <input type="search" name="q">
+            <label for="buscador">Buscar</label>
+            <input type="search" id="buscador" name="buscador">
         </form>
 
         <p>Admin Control Panel</p>
-        <img loading="lazy" src="" alt="Perfil del administrador">
-  </header>
+        <img loading="lazy" src="../../routes/inicio/isotipo.png" alt="Perfil del administrador">
+    </header>
+    
+  <!-- FIN HEADER -->
 
   <!-- INICIO ASIDE -->
 
@@ -32,12 +38,14 @@
         <li><a href="reservas.html">Reservas</a></li>
         <li><a href="usuarios.html" aria-current="page">Usuarios</a></li>
         <li><a href="planes.html">Planes</a></li>
-        <li><a href="galerias.html">Galerías</a></li>
+        <li><a href="galeria.html">Galerías</a></li>
         <li><a href="notificacion.html">Notificaciones</a></li>
         <li><a href="contabilidad-resumen.html">Contabilidad</a></li>
       </ul>
     </nav>
   </aside>
+
+  <!-- FIN ASIDE -->
 
   <!-- INICIO MAIN -->
 
@@ -61,7 +69,6 @@
         <li><button type="button" aria-pressed="true">Todos</button></li>
         <li><button type="button" aria-pressed="false">Clientes</button></li>
         <li><button type="button" aria-pressed="false">Fotografos</button></li>
-        <li><button type="button" aria-pressed="false">En edición</button></li>
         <li><button type="button" aria-pressed="false">Editores</button></li>
         <li><button type="button" aria-pressed="false">Administradores</button></li>
 
@@ -73,7 +80,8 @@
         <h2>Listado de usuarios</h2>
 
         <form action="#" method="get">
-            <input type="search" name="q" id="">
+            <label for="buscador-usuarios">Buscar</label>
+            <input type="search" id="buscador-usuarios" name="buscador-usuarios">
             <button type="button">Exportar -></button>
         </form>
 
@@ -206,6 +214,8 @@
 
   </main>
 
+  <!-- FIN MAIN -->
+
   <!-- INICIO FOOTER -->
 
   <footer>
@@ -214,5 +224,7 @@
 
   </footer>
     
+  <!-- FIN FOOTER -->
+
 </body>
 </html>

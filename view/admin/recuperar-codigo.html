@@ -1,8 +1,11 @@
+<!-- PAGINA DE RECUPERAR CONTRASENA - CODIGO - LUZ DE SANTIAGO --->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recuperar contrasea/codigo - Luz de Santiago - Admin">
     <title>Recuperar Codigo | Luz de Santiago</title>
 </head>
 <body>
@@ -14,7 +17,7 @@
         <img loading="lazy" src="../../routes/inicio/isotipo.png" width="100" height="50" alt="logo Luz de Santiago Estudio Fotografico">
         <p>Estudio Fotografico</p>
 
-        <h1>Panel de administracion &amp; Gestion</h1>
+        <p>Panel de administracion &amp; Gestion</p>
 
         <small>© LUZ DE SANTIAGO ESTUDIO FOTOGRAFICO · TODOS LOS DERECHOS RESERVADOS</small>
 
@@ -34,14 +37,25 @@
 
                 <fieldset>
                     <legend>Codigo de verificacion</legend>
-                    <input type="text" name="digito1" inputmode="numeric" maxlength="1" required>
-                    <input type="text" name="digito2" inputmode="numeric" maxlength="1" required>
-                    <input type="text" name="digito3" inputmode="numeric" maxlength="1" required>
-                    <input type="text" name="digito4" inputmode="numeric" maxlength="1" required>
-                    <input type="text" name="digito5" inputmode="numeric" maxlength="1" required>
-                    <input type="text" name="digito6" inputmode="numeric" maxlength="1" required>
-                </fieldset>
+                    <label for="digito1">Digito 1 de 6</label>
+                    <input type="text" id="digito1" name="digito1" inputmode="numeric" maxlength="1" placeholder="0" autocomplete="one-time-code" required>
+                    <label for="digito2">Digito 2 de 6</label>
+                    <input type="text" id="digito2" name="digito2" inputmode="numeric" maxlength="1" placeholder="0" autocomplete="one-time-code" required>
+                    <label for="digito3">Digito 3 de 6</label>
+                    <input type="text" id="digito3" name="digito3" inputmode="numeric" maxlength="1" placeholder="0" autocomplete="one-time-code" required>
+                    <label for="digito4">Digito 4 de 6</label>
+                    <input type="text" id="digito4" name="digito4" inputmode="numeric" maxlength="1" placeholder="0" autocomplete="one-time-code" required>
+                    <label for="digito5">Digito 5 de 6</label>
+                    <input type="text" id="digito5" name="digito5" inputmode="numeric" maxlength="1" placeholder="0" autocomplete="one-time-code" required>
+                    <label for="digito6">Digito 6 de 6</label>
+                    <input type="text" id="digito6" name="digito6" inputmode="numeric" maxlength="1" placeholder="0" autocomplete="one-time-code" required>
 
+                </fieldset>
+                <p>
+                       ¿No te llego el codigo?
+                      <button type="button" id="reenviar-codigo">Reenviar codigo</button>
+                </p>
+                
                 <button type="submit">Continuar</button>
             </form>
 
