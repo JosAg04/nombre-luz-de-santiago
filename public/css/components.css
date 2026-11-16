@@ -1,0 +1,145 @@
+/*=================================================
+     Hoja de estilo Componentes reutilizables
+     .container, .section, .grid, .button, .card
+===================================================*/
+
+@import url(variables.css);
+@import url(reset.css);
+
+/*=======================
+        CONTAINER
+ =======================*/
+
+ .container {
+    width: 100%;
+    max-width: 75rem;
+    margin-inline: auto;
+    padding-inline: var(--pad-pagina);
+ }
+
+ .container--angosto {
+    max-width: 50rem;
+ }
+
+ .container--ancho {
+    max-width: 90rem;
+ }
+
+ /*=======================
+        SECTION
+ =======================*/
+
+ .section {
+    padding-block: clamp(2.5rem, 8vw, 5rem);
+    background-color: var(--color-fondo);
+ }
+
+ .section--alt {
+    background-color: var(--color-fondo-card);
+ }
+
+ .section--oscura {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+ }
+
+ .section--oscura .section__titulo {
+    color: var(--color-fondo);
+ }
+
+ .section__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+ }
+
+ .section__titulo {
+    font-family: var(--fuente-texto-titulos);
+    font-weight: var(--texto-bold);
+    color: var(--color-titulo);
+ }
+
+ .section__subtitulo {
+    color: var(--color-texto);
+ }
+
+  /*=======================
+            GRID
+ =======================*/
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr; /* una columna para moviles (no te olvides) */
+}
+
+.grid--auto {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); /* las columnas son automaticas, se organizan segun el tamano de la pantalla */
+}
+
+/*=======================
+            BUTTON
+ =======================*/
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    border: 1px solid var(--color-secundario);
+    border-radius: var(--radio-comun);
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    font-family: var(--fuente-texto-cuerpo);
+    font-size: 1rem;
+    font-weight: var(--texto-semibold);
+    line-height: 1.2;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: var(--color-resaltado);
+    border-color: var(--color-resaltado);
+    color: var(--color-fondo);
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.button:focus-visible {
+    outline: 3px solid var(--color-resaltado);
+    outline-offset: 3px;
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+.button:disabled, button[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/*=======================
+            CARD
+ =======================*/
+
+ .card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--color-bordes);
+    border-radius: var(--radio-comun);
+    background-color: var(--color-fondo-card);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+ }
+
+ .card:hover {
+    box-shadow: 0 8px 24px rgb(0 0 0 / 0.1);
+    transform: translateY(-4px);
+ }
