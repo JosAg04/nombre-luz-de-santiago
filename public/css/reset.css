@@ -2,6 +2,8 @@
      Hoja de estilo reset 
 ===============================*/
 
+@import url(variables.css);
+
 /*==============================================================
         RESET QUITAR MARGENES Y RELLENOS POR DEFECTO 
  ===============================================================*/
@@ -25,7 +27,7 @@ ul, ol, a {
  =============================== */
 
  body {
-    font-family: var(--fuente-texto);
+    font-family: var(--fuente-texto-cuerpo);
     font-size: 1.5rem;
     font-weight: var(--texto-regular);
     line-height: 1.5;
@@ -38,7 +40,7 @@ ul, ol, a {
  =============================== */
 
  h1, h2, h3, h4 {
-    font-family: var(--fuente-texto);
+    font-family: var(--fuente-texto-titulos);
     font-weight: var(--texto-bold);
     line-height: 1.2;
     color: var(--color-titulo);
@@ -58,12 +60,12 @@ ul, ol, a {
  }
 
  a:focus-visible {
-    outline: 3px solid var(--color-iconos);
+    outline: 3px solid var(--color-primario);
     outline-offset: 2px;
  }
 
 a[aria-current="page"] {
-    color: var(--color-iconos);
+    color: var(--color-primario);
 }
 
 /*============================= 
